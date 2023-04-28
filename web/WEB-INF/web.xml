@@ -3,12 +3,11 @@
     <filter>
         <filter-name>FilterBasicAuthorization</filter-name>
         <filter-class>security.filter.FilterBasicAuthorization</filter-class>
-    </filter>
+    </filter>    
     <filter-mapping>
         <filter-name>FilterBasicAuthorization</filter-name>
         <url-pattern>/api/basic/access/*</url-pattern>
-    </filter-mapping>
-    
+    </filter-mapping>    
     <filter>
         <filter-name>FilterAuthorizationJsonWebToken</filter-name>
         <filter-class>security.filter.FilterAuthorizationJsonWebToken</filter-class>
@@ -16,5 +15,13 @@
     <filter-mapping>
         <filter-name>FilterAuthorizationJsonWebToken</filter-name>
         <url-pattern>/api/token/*</url-pattern>
+    </filter-mapping>    
+    <filter>
+        <filter-name>FilterCrossOriginResourceSharing</filter-name>
+        <filter-class>security.filter.FilterCrossOriginResourceSharing</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterCrossOriginResourceSharing</filter-name>
+        <url-pattern>/api/*</url-pattern>
     </filter-mapping>
 </web-app>
